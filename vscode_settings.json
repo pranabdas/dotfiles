@@ -1,0 +1,31 @@
+{
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.fontFamily": "Hack, Menlo, Monaco, 'Courier New', monospace",
+    "workbench.colorTheme": "Dracula At Night",
+    "workbench.iconTheme": "vscode-great-icons",
+    "editor.fontSize": 14,
+    "editor.minimap.enabled": false,
+    "git.ignoreMissingGitWarning": true,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.find.seedSearchStringFromSelection": true,
+    // "editor.renderWhitespace": "boundary",
+    "editor.wordWrap": "on",
+    "editor.tabSize": 4,
+    // "editor.formatOnPaste": true,
+    // "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "editor.rulers": [
+
+    80
+    ],
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#fdb88056"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}
