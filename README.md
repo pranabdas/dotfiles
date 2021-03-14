@@ -1,5 +1,11 @@
 These are my personalized settings files.
 
+#### Gitconfig 
+Replace with actual email address. 
+```
+wget https://raw.githubusercontent.com/pranabdas/dotfiles/main/gitconfig -O ~/.gitconfig
+```
+
 #### VIM
 ```
 wget https://raw.githubusercontent.com/pranabdas/dotfiles/main/vimrc -O ~/.vimrc
@@ -14,10 +20,12 @@ Install extensions:
 code --install-extension bceskavich.theme-dracula-at-night \
 emmanuelbeziat.vscode-great-icons \
 esbenp.prettier-vscode \
+ms-python.python \
+ms-toolsai.jupyter \
 streetsidesoftware.code-spell-checker
 ```
 
-Location for settings file:  
-**Windows:** %APPDATA%\Code\User\settings.json  
-**macOS:** $HOME/Library/Application\ Support/Code/User/settings.json  
-**Linux:** $HOME/.config/Code/User/settings.json
+Location for VSCode settings file:  
+**Windows:** `%APPDATA%\Code\User\settings.json`  
+**macOS:** `$HOME/Library/Application\ Support/Code/User/settings.json`  
+**Linux:** `$HOME/.config/Code/User/settings.json`

@@ -14,18 +14,22 @@
     "editor.tabSize": 4,
     // "editor.formatOnPaste": true,
     // "editor.multiCursorModifier": "ctrlCmd",
+    // "editor.formatOnSave": true,
+    // "editor.formatOnPaste": true,
     "editor.snippetSuggestions": "top",
     "editor.rulers": [
-
-    80
+        80
     ],
     "workbench.colorCustomizations": {
         "editorRuler.foreground": "#fdb88056"
     },
-    "[javascriptreact]": {
+    "[javascript, javascriptreact, jsonc]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ]
 }
