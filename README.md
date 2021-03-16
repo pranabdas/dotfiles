@@ -1,7 +1,7 @@
 These are my personalized settings files.
 
 #### Gitconfig 
-Corrct the email address. 
+Replace with actual email address. 
 ```
 wget https://raw.githubusercontent.com/pranabdas/dotfiles/main/gitconfig -O ~/.gitconfig
 ```
