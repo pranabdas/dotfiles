@@ -1,0 +1,9 @@
+[user]
+	name = Pranab Das
+	email = email@example.com
+[core]
+	editor = code --wait
+[push]
+	default = current
+[github]
+	user = pranabdas
