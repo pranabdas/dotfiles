@@ -17,7 +17,13 @@ esbenp.prettier-vscode \
 streetsidesoftware.code-spell-checker
 ```
 
-Location for settings file:  
+Location for VSCode settings file:  
 **Windows:** `%APPDATA%\Code\User\settings.json`  
 **macOS:** `$HOME/Library/Application\ Support/Code/User/settings.json`  
 **Linux:** `$HOME/.config/Code/User/settings.json`
+
+#### Gitconfig 
+Corrct the email address. 
+```
+wget https://raw.githubusercontent.com/pranabdas/dotfiles/main/gitconfig -O ~/.gitconfig
+```
