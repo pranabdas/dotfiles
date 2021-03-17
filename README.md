@@ -29,3 +29,6 @@ Location for VSCode settings file:
 **Windows:** `%APPDATA%\Code\User\settings.json`  
 **macOS:** `$HOME/Library/Application\ Support/Code/User/settings.json`  
 **Linux:** `$HOME/.config/Code/User/settings.json`
+
+#### Font
+<https://github.com/source-foundry/Hack>
