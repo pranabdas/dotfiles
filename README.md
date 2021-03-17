@@ -20,6 +20,8 @@ Install extensions:
 code --install-extension bceskavich.theme-dracula-at-night \
 emmanuelbeziat.vscode-great-icons \
 esbenp.prettier-vscode \
+ms-python.python \
+ms-toolsai.jupyter \
 streetsidesoftware.code-spell-checker
 ```
 
