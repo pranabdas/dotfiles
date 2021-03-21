@@ -23,7 +23,7 @@
     "workbench.colorCustomizations": {
         "editorRuler.foreground": "#fdb88056"
     },
-    "[javascript, javascriptreact, jsonc]": {
+    "[javascriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "workbench.editorAssociations": [
@@ -33,5 +33,11 @@
         }
     ],
     "python.linting.pylintEnabled": true,
-    "python.linting.enabled": true
+    "python.linting.enabled": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 }
