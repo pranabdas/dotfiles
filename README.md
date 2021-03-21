@@ -7,6 +7,7 @@ wget https://raw.githubusercontent.com/pranabdas/dotfiles/main/gitconfig -O ~/.g
 ```
 
 #### VIM
+Replace with actual email address for default GPG encryption address. 
 ```
 wget https://raw.githubusercontent.com/pranabdas/dotfiles/main/vimrc -O ~/.vimrc
 wget https://raw.githubusercontent.com/pranabdas/dotfiles/main/vim.zip
