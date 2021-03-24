@@ -1,4 +1,9 @@
 {
+    // disable telemetry
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    //
     "workbench.startupEditor": "newUntitledFile",
     "editor.fontFamily": "Hack, Menlo, Monaco, 'Courier New', monospace",
     "workbench.colorTheme": "Dracula At Night",
@@ -23,9 +28,6 @@
     "workbench.colorCustomizations": {
         "editorRuler.foreground": "#fdb88056"
     },
-    "[javascriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
     "workbench.editorAssociations": [
         {
             "viewType": "jupyter.notebook.ipynb",
@@ -38,6 +40,9 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
 }
