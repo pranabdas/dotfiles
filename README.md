@@ -2,13 +2,13 @@ These are my personalized settings files.
 
 #### Gitconfig 
 Replace with actual email address. 
-```
+```console
 wget https://raw.githubusercontent.com/pranabdas/dotfiles/main/gitconfig -O ~/.gitconfig
 ```
 
 #### VIM
 Replace with actual email address for default GPG encryption address. 
-```
+```console
 wget https://raw.githubusercontent.com/pranabdas/dotfiles/main/vimrc -O ~/.vimrc
 wget https://raw.githubusercontent.com/pranabdas/dotfiles/main/vim.zip
 unzip vim
@@ -16,14 +16,16 @@ mv .vim ~/  # if working directory is not $HOME
 ```
 
 #### VSCode
-Install extensions:
+Install VSCode extensions:
+
+Linux/macOS
+```console
+cat vscode-extensions-list.txt | xargs -L1 code --install-extension
 ```
-code --install-extension bceskavich.theme-dracula-at-night \
-emmanuelbeziat.vscode-great-icons \
-esbenp.prettier-vscode \
-ms-python.python \
-ms-toolsai.jupyter \
-streetsidesoftware.code-spell-checker
+
+Windows:
+```console
+foreach($line in get-content vscode-extensions-list.txt) {code --install-extension $($line)}
 ```
 
 Location for VSCode settings file:  
