@@ -1,0 +1,8 @@
+bceskavich.theme-dracula-at-night
+CoenraadS.bracket-pair-colorizer-2
+emmanuelbeziat.vscode-great-icons
+esbenp.prettier-vscode
+ms-python.python
+ms-toolsai.jupyter
+SirTori.indenticator
+streetsidesoftware.code-spell-checker
