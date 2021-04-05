@@ -1,0 +1,17 @@
+pip
+mkdocs
+mkdocs-material
+jupyterlab
+numpy 
+scipy 
+matplotlib 
+seaborn 
+bokeh 
+pandas 
+geopandas 
+xlrd
+openpyxl
+virtualenv
+scikit-learn
+missingno
+tensorflow
