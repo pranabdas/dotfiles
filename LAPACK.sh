@@ -1,4 +1,4 @@
-# script to install lpack in ubuntu/debian
+# Script to install lpack in Ubuntu/Debian (http://www.netlib.org/lapack/)
 apt update && apt upgrade -y
 DEBIAN_FRONTEND=noninteractive apt install -y --no-install-recommends wget \
     ca-certificates \
