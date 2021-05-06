@@ -1,5 +1,3 @@
-# cat oh-my-bash.bashrc >> ~/.bashrc
-
 export OSH=$HOME/.oh-my-bash
 
 #OSH_THEME="demula"
