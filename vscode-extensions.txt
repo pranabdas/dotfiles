@@ -3,6 +3,8 @@ CoenraadS.bracket-pair-colorizer-2
 emmanuelbeziat.vscode-great-icons
 esbenp.prettier-vscode
 ms-python.python
+ms-python.vscode-pylance
 ms-toolsai.jupyter
+silvenon.mdx
 SirTori.indenticator
 streetsidesoftware.code-spell-checker
