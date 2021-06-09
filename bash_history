@@ -46,3 +46,33 @@ npm start
 npm run build
 #1621910480
 npm run gh-deploy
+#1621910481
+firefox &
+#1621910482
+docker run --rm -ti -e DISPLAY=docker.for.mac.host.internal:0 ubuntu bash
+#1621910483
+docker run -it --rm -p 8888:8888 -v $PWD:/home ubuntu bash
+#1621910484
+docker run -ti -v ${PWD}:/home -p 4000:4000 --rm ubuntu bash
+#1621910485
+docker run -it --rm -p 8000:8000 -v $PWD:/home ubuntu bash
+#1621910486
+docker run -it --rm ubuntu bash
+#1621910487
+docker run -ti -v ${PWD}:/home --rm fedora pdflatex
+#1621910488
+git stash
+#1621910489
+git pull
+#1621910490
+git stash apply
+#1621910491
+xhost+
+#1621910492
+npm outdated
+#1621910493
+npm update
+#1621910494
+source venv/bin/activate
+#1621910495
+deactivate

@@ -53,3 +53,49 @@ wget https://raw.githubusercontent.com/pranabdas/dotfiles/main/bash_history -O ~
 ### Fonts
 - <https://github.com/source-foundry/Hack>
 - <https://madmalik.github.io/mononoki/>
+
+### Docker
+
+Useful docker commands:
+```console
+docker build -t latex . 
+docker build -t latex -f latex.dockerfile .
+
+docker run -ti ubuntu bash
+docker run -it --rm -v ${PWD}:/home -p 8888:8888 jupyter bash
+docker run -it --rm -v ${PWD}:/home fedora pdflatex main.tex
+
+# X11 forwarding
+# macOS
+docker run --rm -ti -e DISPLAY=docker.for.mac.host.internal:0 ubuntu bash
+# Windows
+docker run --rm -ti -e DISPLAY=host.docker.internal:0 jess/firefox
+# Linux
+docker run --rm -ti --net=host -e DISPLAY=:0 jess/firefox
+
+# Jekyll 
+bundle exec jekyll serve --host 0.0.0.0 --port 4000
+bundle exec jekyll build
+
+# Mkdocs
+docker run -ti -v ${PWD}:/home -p 8000:8000 mkdocs bash
+mkdocs new mydocs && cd mydocs
+mkdocs serve --dev-addr=0.0.0.0:8000
+docker run -it --rm -v ${PWD}:/home ubuntu mkdocs build
+
+# list images
+docker images
+
+# list containers
+docker ps -a
+
+# delete stopped containers
+docker container prune
+
+# delete a dpecific image
+docker rmi <image-id or name>
+
+# delete evrything
+docker system prune -a
+```
+
