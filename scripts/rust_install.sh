@@ -1,3 +1,4 @@
+#!/bin/bash
 # Rust installation script for ubuntu
 # Run : bash install.sh && source $HOME/.cargo/env
 apt update && apt install -y curl && \

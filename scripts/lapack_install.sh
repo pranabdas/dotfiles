@@ -1,4 +1,5 @@
-# Script to install LAPACK in Ubuntu/Debian (http://www.netlib.org/lapack/)
+#!/bin/bash
+# install LAPACK in Ubuntu/Debian (http://www.netlib.org/lapack/)
 # Run : sh lapack_install.sh
 apt update && apt upgrade -y
 DEBIAN_FRONTEND=noninteractive apt install -y --no-install-recommends wget \
