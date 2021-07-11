@@ -3,10 +3,10 @@ base_path="${HOME}/Documents/github"
 
 repo_list=()
 repo_list+=(arpespythontools)
+repo_list+=(espresso)
 repo_list+=(linux)
 repo_list+=(machine-learning)
 repo_list+=(python-tutorial)
-repo_list+=(qe-dft)
 repo_list+=(suvtools)
 
 current_pwd=${PWD}
@@ -21,7 +21,7 @@ for i in "${repo_list[@]}"
     npm update &> /dev/null
 ##    npx npm-check-updates --upgrade --target minor
 # manual update for major versions (test carefully)
-    sed -i.bak 's/"2.0.0-beta.3"/"2.0.0-beta.4"/gI' package.json &> /dev/null
+    sed -i.bak 's/"2.0.0-beta.3"/"2.0.0-beta.7babfe036"/gI' package.json &> /dev/null
     rm package.json.bak &> /dev/null
 
     echo "Deleting package-lock.json and node_modules ..."
@@ -44,7 +44,7 @@ for i in "${repo_list[@]}"
 #    rm -rf build
 #    npm run build
 #    npm run gh-deploy
-    cd ..
+    cd ${base_path}
     printf "Done ${i}.\n\n"
 done
 cd ${current_pwd}

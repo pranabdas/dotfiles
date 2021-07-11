@@ -1,8 +1,9 @@
+#!/bin/bash
 # This script converts Jekyll generated 404 page to its source code
 origin=$HOME/Documents/github/pranabdas.github.io
 dest=$HOME/Desktop
 
-# remove all inline scrips
+# removes all (in my case, Jekyll case sensitive script only) inline scrips
 sed '/<script>/,/<\/script>/d' $origin/404.html > $dest/404.html
 
 # inser following script under head tag
@@ -30,7 +31,7 @@ sed -i.bak '/<head>/a\
 \    </script>\
 ' $dest/404.html
 
-# insert front matter at the top
+# insert empty front matter at the top
 front_matter=`echo "---\n---\n"; cat $dest/404.html`
 echo "$front_matter" > $dest/404.html
 rm $dest/404.html.bak

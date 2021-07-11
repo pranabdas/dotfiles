@@ -13,6 +13,7 @@ repo_list+=(data-projects)
 repo_list+=(doc-template)
 repo_list+=(dotfiles)
 repo_list+=(drive)
+repo_list+=(espresso)
 repo_list+=(fortran)
 repo_list+=(fullprof)
 repo_list+=(git-learning)
@@ -20,6 +21,7 @@ repo_list+=(js-learning)
 repo_list+=(labrunner)
 repo_list+=(LaTeX)
 repo_list+=(linux)
+repo_list+=(homepage-beta)
 repo_list+=(homepage-dev)
 repo_list+=(machine-learning)
 repo_list+=(openssl.vim)
@@ -27,7 +29,6 @@ repo_list+=(other-projects)
 repo_list+=(pranab.netlify.app)
 repo_list+=(pranabdas.github.io)
 repo_list+=(python-tutorial)
-repo_list+=(qe-dft)
 repo_list+=(react-auth0)
 repo_list+=(react-learning)
 repo_list+=(retasks)
@@ -36,7 +37,7 @@ repo_list+=(suvapp)
 repo_list+=(suvtools)
 repo_list+=(vim-gnupg)
 
-len=${#REPO_LIST[@]}
+len=${#repo_list[@]}
 progress=0
 
 for i in "${repo_list[@]}"

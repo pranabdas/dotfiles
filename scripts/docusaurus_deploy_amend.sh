@@ -3,10 +3,10 @@ base_path="${HOME}/Documents/github"
 
 repo_list=()
 repo_list+=(arpespythontools)
+repo_list+=(espresso)
 repo_list+=(linux)
 repo_list+=(machine-learning)
 repo_list+=(python-tutorial)
-repo_list+=(qe-dft)
 repo_list+=(suvtools)
 
 current_pwd=${PWD}
@@ -27,20 +27,20 @@ do mkdir tmpghdeploy
 
   echo "Cloning gh-pages branch ..."
   git clone --branch gh-pages https://github.com/pranabdas/${i} &> /dev/null
-  cd ../${i}
+  cd ${base_path}/${i}
   rm -rf build
 
   echo "Building site ..."
   npm run build &> /dev/null
-  rsync -azh --exclude .git --delete build/ ../tmpghdeploy/${i}
-  cd ../tmpghdeploy/${i}
+  rsync -azh --exclude .git --delete ${base_path}/${i}/build/ ${base_path}/tmpghdeploy/${i}
+  cd ${base_path}/tmpghdeploy/${i}
   if [ -e ".DS_Store" ] ; then
     rm ".DS_Store"
   fi
   git add --all && git commit --amend --no-edit &> /dev/null
   git push origin gh-pages --force &> /dev/null
   printf "Deployed ${i}.\n\n"
-  cd ../..
+  cd ${base_path}
   rm -rf tmpghdeploy
 done
 
