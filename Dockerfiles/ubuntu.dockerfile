@@ -57,7 +57,13 @@ RUN apt update --fix-missing; apt upgrade -yq; \
        >> /etc/jupyter/jupyter_server_config.py && \
 
 # Bundler and jekyll
-    gem install jekyll bundler && \
+    gem install bundler jekyll && \
+#    mkdir tmpjekyll && \
+#    cd tmpjekyll && \
+#    wget https://raw.githubusercontent.com/pranabdas/dotfiles/main/Gemfile && \
+#    bundle install && \
+#    cd .. && \
+#    rm -rf tmpjekyll && \
 
 # oh-my-bash
     git clone git://github.com/ohmybash/oh-my-bash.git ~/.oh-my-bash && \

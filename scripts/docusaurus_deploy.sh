@@ -3,10 +3,10 @@ base_path="${HOME}/Documents/github"
 
 repo_list=()
 repo_list+=(arpespythontools)
+repo_list+=(espresso)
 repo_list+=(linux)
 repo_list+=(machine-learning)
 repo_list+=(python-tutorial)
-repo_list+=(qe-dft)
 repo_list+=(suvtools)
 
 current_pwd=${PWD}
@@ -16,11 +16,14 @@ progress=0
 
 for i in "${repo_list[@]}"
 do cd ${i}
+  progress=$((progress + 1))
   echo "Deploying ${i} (${progress} of ${len})"
   rm -rf build
+  echo "Building ..."
   npm run build &> /dev/null
+  echo "Deploy in progress ..."
   npm run gh-deploy &> /dev/null
-  cd ..
+  cd ${base_path}
   printf "Deployed ${i}.\n\n"
 done
 cd ${current_pwd}
