@@ -31,10 +31,10 @@ RUN apt update --fix-missing; apt upgrade -yq; \
     pandas \
     xlrd \
     openpyxl \
-    seaborn \
+#    seaborn \
 #    bokeh \
 #    geopandas \
-    scikit-learn \
+#    scikit-learn \
     missingno && \
 
 # nodejs LTS

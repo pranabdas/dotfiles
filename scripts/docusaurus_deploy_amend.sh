@@ -34,9 +34,8 @@ do mkdir tmpghdeploy
   npm run build &> /dev/null
   rsync -azh --exclude .git --delete ${base_path}/${i}/build/ ${base_path}/tmpghdeploy/${i}
   cd ${base_path}/tmpghdeploy/${i}
-  if [ -e ".DS_Store" ] ; then
-    rm ".DS_Store"
-  fi
+  find . -type f -name \*.DS_Store -delete &> /dev/null
+  echo "Updating on GitHub ..."
   git add --all && git commit --amend --no-edit &> /dev/null
   git push origin gh-pages --force &> /dev/null
   printf "Deployed ${i}.\n\n"
