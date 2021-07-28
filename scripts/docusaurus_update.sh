@@ -4,10 +4,13 @@ base_path="${HOME}/Documents/github"
 repo_list=()
 repo_list+=(arpespythontools)
 repo_list+=(espresso)
+repo_list+=(fortran)
 repo_list+=(linux)
 repo_list+=(machine-learning)
 repo_list+=(python-tutorial)
 repo_list+=(suvtools)
+
+ver=("2.0.0-beta.8621ae291" "2.0.0-beta.4")
 
 current_pwd=${PWD}
 cd ${base_path}
@@ -21,7 +24,8 @@ for i in "${repo_list[@]}"
     npm update &> /dev/null
 ##    npx npm-check-updates --upgrade --target minor
 # manual update for major versions (test carefully)
-    sed -i.bak 's/"2.0.0-beta.88de3a510"/"2.0.0-beta.a7a5ea346"/gI' package.json &> /dev/null
+# in bash the array index starts at 0, while in zsh it start at 1
+    sed -i.bak s/${ver[@]:0:1}/${ver[@]:1:1}/gI package.json &> /dev/null
     rm package.json.bak &> /dev/null
 
     echo "Deleting package-lock.json and node_modules ..."
@@ -41,6 +45,8 @@ for i in "${repo_list[@]}"
     sed -i.bak 's/f6f8fa/f6f6f6/gI' \
       node_modules/prism-react-renderer/themes/github/index.cjs.js
 
+    sed -i.bak 's/box-shadow: var(--ifm-global-shadow-lw)/box-shadow: none/gI' \
+      node_modules/@docusaurus/theme-classic/src/theme/CodeBlock/styles.module.css
 #    rm -rf build
 #    npm run build
 #    npm run gh-deploy

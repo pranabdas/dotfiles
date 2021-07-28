@@ -24,6 +24,7 @@
   --ifm-color-primary-lighter: var(--color-primary);
   --ifm-color-primary-lightest: var(--color-primary);
   --ifm-toc-border-color: var(--border-color);
+  --ifm-global-shadow-lw: 0px;
 }
 
 html[data-theme='dark'] {
@@ -51,23 +52,25 @@ html[data-theme='dark'] .hero--primary {
 }
 
 .hero--primary .button--outline {
-  background-color: var(--color-white);
-  border-color: var(--color-black);
+  background-color: var(--color-primary);
+  --ifm-font-color-base: var(--color-white);
 }
 
 .hero--primary .button--outline:hover {
-  background-color: rgba(0, 0, 0, 0.75);
-  color: var(--color-white)
+  background-color: rgba(0, 193, 255, .95);
+  color: var(--color-white);
+  transition: 0.2s;
 }
 
 html[data-theme='dark'] .hero--primary .button--outline {
-  background-color: var(--color-black);
-  border-color: var(--color-white);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 html[data-theme='dark'] .hero--primary .button--outline:hover {
-  background-color: var(--color-white);
-  color: var(--color-black);
+  background-color: rgba(0, 193, 255, .95);
+  color: var(--color-white);
+  transition: 0.2s;
 }
 
 .docusaurus-highlight-code-line {
@@ -77,7 +80,6 @@ html[data-theme='dark'] .hero--primary .button--outline:hover {
   padding: 0 var(--ifm-pre-padding);
 }
 
-/* If you have a different syntax highlighting theme for dark mode. */
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(66, 80, 80, 0.6);
 }
@@ -113,6 +115,7 @@ html[data-theme='dark'] .header-github-link:before {
 a {
   transition: color 0.2s;
 }
+
 a:hover {
   color: var(--color-secondary);
 }
@@ -130,9 +133,25 @@ a:hover {
 .pagination-nav__link {
   transition: color 0.2s, border-color 0.2s;
 }
+
 .pagination-nav__link:hover {
   color: var(--color-secondary);
   border-color: var(--color-secondary);
+}
+
+.alert {
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
+}
+
+.alert a {
+  color: var(--color-primary);
+  text-decoration-color: var(var(--color-primary));
+}
+
+.alert a:hover, .alert a:focus {
+  color: var(--color-secondary);
+  text-decoration-color: var(--color-secondary);
+  text-decoration-thickness: 1px;
 }
 
 .alert--danger {
@@ -144,18 +163,8 @@ a:hover {
 }
 
 .alert--secondary {
-  border-color: #8661c5;
-  background-color: #efd9fd;
-}
-
-html[data-theme='dark'] .alert--secondary {
-  border-color: #990099;
-  background-color: #330033;
-  color: var(--color-white);
-}
-
-html[data-theme='dark'] .admonition-note {
-  --ra-admonition-icon-color: var(--color-white);
+  border-color: rgb(179, 0, 179);
+  background-color: rgba(179, 0, 179, 0.2);
 }
 
 .navbar {
@@ -197,35 +206,6 @@ h4 {
   font-size: 1em !important;
 }
 
-/*
-html[data-theme='light'] .DocSearch {
-  --docsearch-primary-color: var(--ifm-color-primary);
-  --docsearch-text-color: var(--ifm-font-color-base);
-  --docsearch-muted-color: var(--ifm-color-secondary-darkest);
-  --docsearch-container-background: rgba(94, 100, 112, 0.7);
-  --docsearch-modal-background: var(--ifm-color-secondary-lighter);
-  --docsearch-searchbox-background: var(--ifm-color-secondary);
-  --docsearch-searchbox-focus-background: var(--ifm-color-white);
-  --docsearch-hit-color: var(--ifm-font-color-base);
-  --docsearch-hit-active-color: var(--ifm-color-white);
-  --docsearch-hit-background: var(--ifm-color-white);
-  --docsearch-footer-background: var(--ifm-color-white);
+.dropdown__link:hover, .dropdown__link--active {
+  background-color: var(--ifm-menu-color-background-hover);
 }
-
-html[data-theme='dark'] .DocSearch {
-  --docsearch-text-color: var(--ifm-font-color-base);
-  --docsearch-muted-color: var(--ifm-color-secondary-darkest);
-  --docsearch-container-background: rgba(47, 55, 69, 0.7);
-  --docsearch-modal-background: var(--ifm-background-color);
-  --docsearch-searchbox-background: var(--ifm-background-color);
-  --docsearch-searchbox-focus-background: var(--ifm-color-black);
-  --docsearch-hit-color: var(--ifm-font-color-base);
-  --docsearch-hit-active-color: var(--ifm-color-white);
-  --docsearch-hit-background: var(--ifm-color-emphasis-100);
-  --docsearch-footer-background: var(--ifm-background-surface-color);
-  --docsearch-key-gradient: linear-gradient(
-    -26.5deg,
-    var(--ifm-color-emphasis-200) 0%,
-    var(--ifm-color-emphasis-100) 100%
-  );
-} */

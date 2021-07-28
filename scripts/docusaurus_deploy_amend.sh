@@ -3,10 +3,11 @@ base_path="${HOME}/Documents/github"
 
 repo_list=()
 repo_list+=(arpespythontools)
-repo_list+=(espresso)
-repo_list+=(linux)
-repo_list+=(machine-learning)
-repo_list+=(python-tutorial)
+#repo_list+=(espresso)
+#repo_list+=(fortran)
+#repo_list+=(linux)
+#repo_list+=(machine-learning)
+#repo_list+=(python-tutorial)
 repo_list+=(suvtools)
 
 current_pwd=${PWD}
