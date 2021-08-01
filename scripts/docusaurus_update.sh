@@ -7,10 +7,11 @@ repo_list+=(espresso)
 repo_list+=(fortran)
 repo_list+=(linux)
 repo_list+=(machine-learning)
+repo_list+=(openmx)
 repo_list+=(python-tutorial)
 repo_list+=(suvtools)
 
-ver=("2.0.0-beta.8621ae291" "2.0.0-beta.4")
+ver=("0.0.0-3926" "0.0.0-3947")
 
 current_pwd=${PWD}
 cd ${base_path}

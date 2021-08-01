@@ -7,6 +7,7 @@ repo_list+=(espresso)
 repo_list+=(fortran)
 repo_list+=(linux)
 repo_list+=(machine-learning)
+repo_list+=(openmx)
 repo_list+=(python-tutorial)
 repo_list+=(suvtools)
 

@@ -145,7 +145,7 @@ a:hover {
 
 .alert a {
   color: var(--color-primary);
-  text-decoration-color: var(var(--color-primary));
+  text-decoration-color: var(--color-primary);
 }
 
 .alert a:hover, .alert a:focus {
