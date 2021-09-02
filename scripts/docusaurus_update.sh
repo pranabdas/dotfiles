@@ -11,7 +11,7 @@ repo_list+=(openmx)
 repo_list+=(python-tutorial)
 repo_list+=(suvtools)
 
-ver=("0.0.0-3926" "0.0.0-3947")
+ver=("0.0.0-3947" "2.0.0-beta.5")
 
 current_pwd=${PWD}
 cd ${base_path}

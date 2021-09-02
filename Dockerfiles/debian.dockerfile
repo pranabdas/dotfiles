@@ -1,7 +1,7 @@
-# Build : docker build -t ubuntu -f ubuntu.dockerfile .
-# Run   : docker run -ti -v ${PWD}:/home -p 8888:8888 ubuntu bash
+# Build : docker build -t debian -f debian.dockerfile .
+# Run   : docker run -ti -v ${PWD}:/home -p 8888:8888 debian bash
 
-FROM ubuntu:focal
+FROM debian:bullseye-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -21,7 +21,7 @@ RUN apt update --fix-missing; apt upgrade -yq; \
     openbox \
     mesa-utils \
     libgl1-mesa-glx \
-    firefox && \
+    firefox-esr && \
 
 # Install pip packages
     pip3 install jupyterlab \
