@@ -76,3 +76,9 @@ npm update
 source venv/bin/activate
 #1621910495
 deactivate
+#1621910496
+run_keybase -g
+#1621910497
+keybase oneshot -u user --paperkey ""
+#1621910498
+pip install mkdocs mkdocs-material
