@@ -11,7 +11,7 @@ repo_list+=(openmx)
 repo_list+=(python-tutorial)
 repo_list+=(suvtools)
 
-ver=("2.0.0-4155" "0.0.0-4224")
+#ver=("0.0.0-4256" "2.0.0-beta.10")
 
 current_pwd=${PWD}
 cd ${base_path}
@@ -26,8 +26,14 @@ for i in "${repo_list[@]}"
 ##    npx npm-check-updates --upgrade --target minor
 # manual update for major versions (test carefully)
 # in bash the array index starts at 0, while in zsh it start at 1
-    sed -i.bak s/${ver[@]:0:1}/${ver[@]:1:1}/gI package.json &> /dev/null
-    rm package.json.bak &> /dev/null
+#    sed -i.bak s/${ver[@]:0:1}/${ver[@]:1:1}/gI package.json &> /dev/null
+#    rm package.json.bak &> /dev/null
+    
+    # For latest canary
+#    npm i --save-exact @docusaurus/core@canary @docusaurus/preset-classic@canary &> /dev/null
+
+    # For latest beta
+    npm i @docusaurus/core@latest @docusaurus/preset-classic@latest &> /dev/null
 
     echo "Deleting package-lock.json and node_modules ..."
     rm package-lock.json &> /dev/null
