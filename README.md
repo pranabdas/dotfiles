@@ -53,12 +53,22 @@ wget https://raw.githubusercontent.com/pranabdas/dotfiles/main/bash_history -O ~
 ### Fonts
 - <https://github.com/source-foundry/Hack>
 - <https://madmalik.github.io/mononoki/>
+- [SAP 72](https://experience.sap.com/fiori-design-web/downloads/#download-font-72)
+- [Manrope](https://fonts.google.com/specimen/Manrope?query=manrope)
+- [IBM Plex](https://github.com/IBM/plex/releases)
+- [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+
+### Nodejs (LTS) installation on Ubuntu/Debian
+```console
+wget -O - https://deb.nodesource.com/setup_lts.x | sudo bash - && \
+sudo apt update && sudo apt install -y --no-install-recommends nodejs
+```
 
 ### Docker
 
 Useful docker commands:
 ```console
-docker build -t latex . 
+docker build -t latex .
 docker build -t latex -f latex.dockerfile .
 
 docker run -ti ubuntu bash
@@ -73,7 +83,7 @@ docker run --rm -ti -e DISPLAY=host.docker.internal:0 jess/firefox
 # Linux
 docker run --rm -ti --net=host -e DISPLAY=:0 jess/firefox
 
-# Jekyll 
+# Jekyll
 bundle exec jekyll serve --host 0.0.0.0 --port 4000
 bundle exec jekyll build
 

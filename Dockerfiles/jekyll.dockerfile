@@ -5,7 +5,7 @@
 #               : alternatively, you can specify host and port in _config.yml
 #               : website will be served at http://127.0.0.1:4000 on the host
 # Jekyll build  : bundle exec jekyll build
-#               : docker run -ti -v ${PWD}:/home jekyll bundle exec jekyll build
+#               : docker run -ti -v ${PWD}:/home -e LANG=C.UTF-8 ubuntu bundle exec jekyll build
 # Bundler       : bundle init
 #               : bundle install
 #               : bundle update

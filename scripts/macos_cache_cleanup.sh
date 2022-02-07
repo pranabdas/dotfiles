@@ -1,5 +1,4 @@
 sudo rm -rf /Library/Logs/CrashReporter/CoreCapture/*
-rm -rf /Users/Pranab/Library/Caches/Homebrew/downloads/*
 rm -rf ~/Dropbox/.dropbox.cache
 sudo rm -rf ~/Library/Caches/*
 sudo rm -rf /Library/Caches/*
