@@ -1,53 +1,53 @@
 # Build : docker build -t ubuntu -f ubuntu.dockerfile .
 # Run   : docker run -ti -v ${PWD}:/home -p 8888:8888 ubuntu bash
 
-FROM ubuntu:focal
+FROM ubuntu:jammy
 
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt update --fix-missing; apt upgrade -yq; \
     apt install -yq --no-install-recommends \
-    wget \
-    vim \
-    git \
-    python3 \
-    python3-pip \
-    ruby-full \
-    build-essential \
-    zlib1g-dev \
-    locales \
-    fonts-open-sans \
-    xorg \
-    openbox \
-    mesa-utils \
-    libgl1-mesa-glx && \
-#    echo 'deb http://download.opensuse.org/repositories/home:/stevenpusser/xUbuntu_20.04/ /' | tee /etc/apt/sources.list.d/home:stevenpusser.list && \
-#    wget -qO - https://download.opensuse.org/repositories/home:stevenpusser/xUbuntu_20.04/Release.key | gpg --dearmor | tee /etc/apt/trusted.gpg.d/home_stevenpusser.gpg > /dev/null && \
-#    apt update && apt install -y --no-install-recommends palemoon && \
-#    firefox && \
+        build-essential \
+        # firefox \
+        fonts-open-sans \
+        git \
+        libgl1-mesa-glx \
+        locales \
+        mesa-utils \
+        openbox \
+        python3 \
+        python3-pip \
+        ruby-full \
+        unzip \
+        vim \
+        wget \
+        xorg \
+        zip \
+        zlib1g-dev && \
 
 # Install pip packages
-    pip3 install jupyterlab \
-    numpy \
-    scipy \
-    matplotlib \
-    xlrd \
-    openpyxl \
-#    seaborn \
-#    bokeh \
-#    geopandas \
-#    scikit-learn \
-#    astropy \
-#    mkdocs \
-#    mkdocs-material \
-#    missingno \
-    pandas && \
+    pip3 install \
+        astropy \
+        # bokeh \
+        # geopandas \
+        jupyterlab \
+        matplotlib \
+        # missingno \
+        # mkdocs \
+        # mkdocs-material \
+        numpy \
+        openpyxl \
+        pandas \
+        # seaborn \
+        # scikit-learn \
+        scipy \
+        xlrd && \
 
 # nodejs LTS
     wget -O - https://deb.nodesource.com/setup_lts.x | bash - && \
     apt update && apt install -y --no-install-recommends nodejs && \
 
-# settings
+# bash configs
     echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc && \
     echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc && \
     echo "en_US UTF-8" > /etc/locale.gen && \
@@ -55,6 +55,7 @@ RUN apt update --fix-missing; apt upgrade -yq; \
     (echo 'export LANG=en_US.UTF-8' && \
      echo 'export LANGUAGE=en_US:en' && \
      echo 'export LC_ALL=en_US.UTF-8') >> $HOME/.bashrc && \
+
 # jupyter-lab settings
     mkdir /etc/jupyter && \
     (echo "c.ServerApp.ip = '0.0.0.0'" && \

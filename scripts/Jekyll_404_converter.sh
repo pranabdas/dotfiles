@@ -1,10 +1,10 @@
 #!/bin/bash
 # This script converts Jekyll generated 404 page to its source code
-origin=$HOME/Documents/github/pranabdas.github.io
 dest=$HOME/Desktop
+wget https://pranabdas.github.io/404.html -O ${dest}/404.html
 
 # removes all (in my case, Jekyll case sensitive script only) inline scrips
-sed '/<script>/,/<\/script>/d' $origin/404.html > $dest/404.html
+sed -i.bak '/<script>/,/<\/script>/d' ${dest}/404.html
 
 # inser following script under head tag
 sed -i.bak '/<head>/a\
@@ -29,10 +29,10 @@ sed -i.bak '/<head>/a\
 \        }\
 \        window.onload = jekyllFixCaseSensitiveUrl();\
 \    </script>\
-' $dest/404.html
+' ${dest}/404.html
 
 # insert empty front matter at the top
-front_matter=`echo "---\n---\n"; cat $dest/404.html`
-echo "$front_matter" > $dest/404.html
-rm $dest/404.html.bak
-echo "The 404.html is saved in $dest"
+front_matter=`echo "---\n---\n"; cat ${dest}/404.html`
+echo "$front_matter" > ${dest}/404.html
+rm ${dest}/404.html.bak
+echo "The 404.html is saved in ${dest}"

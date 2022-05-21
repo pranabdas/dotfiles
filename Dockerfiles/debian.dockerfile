@@ -69,7 +69,7 @@ RUN apt update --fix-missing; apt upgrade -yq; \
 #    rm -rf tmpjekyll && \
 
 # oh-my-bash
-    git clone git://github.com/ohmybash/oh-my-bash.git ~/.oh-my-bash && \
+    git clone https://github.com/ohmybash/oh-my-bash.git ~/.oh-my-bash && \
     wget https://raw.githubusercontent.com/pranabdas/dotfiles/main/oh-my-bash.bashrc && \
     cat oh-my-bash.bashrc >> ~/.bashrc && \
     rm oh-my-bash.bashrc && \

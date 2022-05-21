@@ -11,8 +11,11 @@ sudo apt install -yq --no-install-recommends \
     openssh-server \
     build-essential \
     rsync \
+    traceroute \
     fonts-open-sans \
-    fontconfig
+    fontconfig \
+    ruby-full \
+    gfortran
 
 # install python packages
 pip3 install jupyterlab \
@@ -21,16 +24,17 @@ pip3 install jupyterlab \
     matplotlib \
     pandas \
     xlrd \
-    openpyxl
+    openpyxl \
+    astropy
 
 echo 'export PATH="/home/pranab/.local/bin/:$PATH"' >> ~/.bashrc
 
 # jupyter-lab settings
 sudo mkdir /etc/jupyter && \
-    (echo "c.ServerApp.ip = '0.0.0.0'" && \
-     echo "c.ServerApp.allow_root = True" && \
-     echo "c.ServerApp.open_browser = False") \
-        | sudo tee /etc/jupyter/jupyter_server_config.py
+(echo "c.ServerApp.ip = '0.0.0.0'" && \
+ echo "c.ServerApp.allow_root = True" && \
+ echo "c.ServerApp.open_browser = False") \
+    | sudo tee /etc/jupyter/jupyter_server_config.py
 
 # install oh-my-bash
 git clone git://github.com/ohmybash/oh-my-bash.git ~/.oh-my-bash
@@ -65,7 +69,19 @@ sudo apt install -y --no-install-recommends \
     texlive-fonts-extra \
     texlive-science \
     texlive-pictures \
-    texlive-luatex
+    texlive-luatex \
+    texinfo  # texi2pdf
+
+# ruby gems : bundler and jekyll
+echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc && \
+echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc && \
+echo "en_US UTF-8" | sudo tee /etc/locale.gen
+sudo locale-gen en_US.UTF-8 && \
+(echo 'export LANG=en_US.UTF-8' && \
+ echo 'export LANGUAGE=en_US:en' && \
+ echo 'export LC_ALL=en_US.UTF-8') >> $HOME/.bashrc
+
+gem install bundler jekyll
 
 # cleanup
 sudo apt autoremove --purge

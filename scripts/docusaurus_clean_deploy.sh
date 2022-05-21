@@ -2,9 +2,13 @@
 base_path="${HOME}/Documents/github"
 
 repo_list=()
+repo_list+=(arpes-manual)
 repo_list+=(arpespythontools)
+repo_list+=(condmat-notes)
 repo_list+=(espresso)
+# repo_list+=(finance)
 repo_list+=(fortran)
+repo_list+=(javascript)
 repo_list+=(linux)
 repo_list+=(machine-learning)
 repo_list+=(openmx)
@@ -29,7 +33,7 @@ do mkdir tmpghdeploy
   touch empty
   git init &> /dev/null
   git remote add origin https://github.com/pranabdas/${i}.git &> /dev/null
-  git add --all && git commit -m "Clean deploy" &> /dev/null
+  git add --all && git commit -m "Clean deploy" --date="2022-03-25 23:18:22"&> /dev/null
   git branch gh-pages &> /dev/null
   git checkout gh-pages &> /dev/null
   cd ${base_path}/${i}

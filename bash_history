@@ -7,15 +7,15 @@ pdflatex main.tex
 #1621910393
 git remote add origin https://github.com/pranabdas/docusaurus.git
 #1621910400
-git reset --hard origin/master
+git reset --hard origin/main
 #1621910406
 mkdir empty && rsync -r --delete empty/ node_modules && rmdir node_modules && rmdir empty
 #1621910411
 git commit -m "updates"
 #1621910416
-git push origin master --force
+git push origin main --force
 #1621910422
-git push origin master
+git push origin main
 #1621910427
 git remote -v
 #1621910432
@@ -82,3 +82,11 @@ run_keybase -g
 keybase oneshot -u user --paperkey ""
 #1621910498
 pip install mkdocs mkdocs-material
+#1621910499
+npx --yes npm-check-updates --target minor --upgrade
+#1621910500
+npx --yes npm-check-updates --target minor
+#1621910501
+npm cache clean --force
+#1621910502
+yarn cache clean --force
