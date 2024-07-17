@@ -1,10 +1,10 @@
 # Build command  : docker build -t dropbox -f dropbox.dockerfile .
-# Run docker     : docker run -ti -v ${PWD}:/home --mac-address 02:42:ac:11:0d:a1 dropbox bash
+# Run docker     : docker run -ti --rm --mac-address $(printf '02:42:ac:%02X:%02X:%02X' $[RANDOM%256] $[RANDOM%256] $[RANDOM%256]) dropbox bash
 # Launch dropbox : ~/.dropbox-dist/dropboxd
 
-FROM ubuntu:focal
+FROM ubuntu:noble
 
-RUN apt update && apt upgrade -y
+RUN apt update
 
 RUN DEBIAN_FRONTEND=noninteractive apt install -y wget libc6 libglapi-mesa \
     libxdamage1 libxfixes3 libxcb-glx0 libxcb-dri2-0 libxcb-dri3-0 \
