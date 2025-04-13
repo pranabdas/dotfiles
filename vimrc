@@ -8,11 +8,8 @@ set ruler
 "colo delek
 "colo desert
 "colo murphy
-colo slate
-
-set hlsearch
-hi Search ctermbg=LightBlue
-hi Search ctermfg=black
+"colo slate
+colo default
 
 " Wrap text after a certain number of characters
 set textwidth=80
@@ -30,9 +27,17 @@ au BufRead,BufNewFile *.in set filetype=fortran
 au BufRead,BufNewFile *.out set filetype=fortran
 au BufRead,BufNewFile matplotlibrc set filetype=python
 
-hi SpellBad ctermbg=Yellow
-hi SpellBad ctermfg=DarkRed
+set hlsearch
+hi Search ctermbg=LightBlue
+hi Search ctermfg=black
+
+set spell
 set spellfile=~/.vim/en.utf-8.add    "type zg to add new words
+hi clear SpellBad
+hi SpellBad cterm=underline
+hi SpellBad ctermfg=160
+"hi SpellBad ctermbg=Yellow
+"hi SpellBad ctermfg=DarkRed
 
 autocmd User GnuPG call timer_start(1, 'FixRedraw', {})
 func FixRedraw(timer)
