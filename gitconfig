@@ -1,9 +1,19 @@
+[core]
+    editor = vi
+    pager = less -iXFR
+[filter "lfs"]
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
 [user]
 	name = Pranab Das
 	email = 31024886+pranabdas@users.noreply.github.com
-[core]
-	editor = code --wait
-[push]
-	default = current
-[github]
-	user = pranabdas
+    signingkey = ~/.ssh/id_ed25519.pub
+[commit]
+    gpgsign = true
+[gpg]
+    program = gpg
+    format = ssh
+[gpg "ssh"]
+    allowedSignersFile = ~/.config/git/allowed_signers
